@@ -7,7 +7,7 @@ by Eduardo Eidelwein Berlitz in fulfillment of Udacity’s Data Analyst Nanodegr
 **1.1 Which statistical test did you use to analyze the NYC subway data? Did you use a one-tail or a two-tail P value? What is the null hypothesis? What is your p-critical value?**
 
 The data was analyzed with the Mann-Whitney U-Test with a two-tailed p-value where the null hypothesis indicates that both samples being compared are statistically identical using a significance level of 5%.
-As described by the scipy.stats.mannwhitneyu docs the reported p-value is for a one-sided hypothesis, so to get the two-sided p-value the returned p-value must be multiplied by 2.
+As described by the *scipy.stats.mannwhitneyu* docs the reported p-value is for a one-sided hypothesis, so to get the two-sided p-value the returned p-value must be multiplied by 2.
 
 **1.2 Why is this statistical test applicable to the dataset? In particular, consider the assumptions that the test is making about the distribution of ridership in the two samples.**
 
@@ -27,7 +27,7 @@ As the two-tailed p-value is smaller than the significance level of 5% (0.05) we
 
 I used Gradient descent to compute the coefficients theta and prediction of the ENTRIESn_hourly. The default values for alpha and the number of iterations were used and as seen by plotting the cost history by the number of iterations the regression model converge on a local minimum.
 
-![CostHistory](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/p1/img/CostHistory.png)
+![CostHistory](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/pj1/img/CostHistory.png)
 
 **2.2 What features (input variables) did you use in your model? Did you use any dummy variables as part of your features?**
 
@@ -39,11 +39,11 @@ I decided to use features that relate in some way whether, hour of day and rider
 
 **2.4 What are the coefficients (or weights) of the non-dummy features in your linear regression model?**
 
-```[  2.92398062e+00, 1.46526720e+01, 4.67708502e+02, -6.22179395e+01 ]```
+`[  2.92398062e+00, 1.46526720e+01, 4.67708502e+02, -6.22179395e+01 ]`
 
 **2.5 What is your model’s R2 (coefficients of determination) value?**
 
-```0.463968815042```
+`0.463968815042`
 
 **2.6 What does this R2 value mean for the goodness of fit for your regression model? Do you think this linear model to predict ridership is appropriate for this dataset, given this R2  value?**
 
@@ -51,7 +51,7 @@ In general, the goodness of fit for a linear regression model can be determinate
 
 The regression model accounts for 46.4% of the variance based on the R-squared which is a statistical measure of how close the data are to the fitted regression line. But it cannot determine whether the coefficient estimates and predictions are biased, which is why the residual plots should be assessed.
 
-![HistogramOfResiduals](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/p1/img/HistogramOfResiduals.png)
+![HistogramOfResiduals](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/pj1/img/HistogramOfResiduals.png)
 
 As seen by the histogram of the residuals the regression model is unbiased. So based on this, I conclude that the linear model is appropriate to predict ridership for this dataset.
 
@@ -59,13 +59,13 @@ As seen by the histogram of the residuals the regression model is unbiased. So b
 
 **3.1 One visualization should contain two histograms: one of  ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.**
 
-![HistOfEntries](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/p1/img/HistOfEntries.png)
+![HistOfEntries](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/pj1/img/HistOfEntries.png)
 
 Plotting this two histograms of subway entries for rainy and non-rainy days we can determine that both distributions are not normally-distributed. Also, as seen by these plots, there are many more samples for rainy days than for non-rainy days.
 
 **3.2 One visualization can be more freeform. You should feel free to implement something that we discussed in class (e.g., scatter plots, line plots) or attempt to implement something more advanced if you'd like.**
 
-![AvgEntriesByHour](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/p1/img/AvgEntriesByHour.png)
+![AvgEntriesByHour](https://raw.githubusercontent.com/eberlitz/data-analyst-nanodegree/master/pj1/img/AvgEntriesByHour.png)
 
 The above chart shows the average hourly ridership by time of day. The sum of ENTRIESn_hourly by Hour was divided by the count of rows for a given time of day. The chart shows that the average ridership is higher at noon and at 20pm.
 
